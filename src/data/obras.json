@@ -1,0 +1,1182 @@
+[
+ {
+  "id": "BERNARDEZ ETAPA 2|2025",
+  "obra": "BERNARDEZ ETAPA 2",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-01",
+    "kwp": 16.1
+   }
+  ],
+  "kwp": 16.1,
+  "potObra": 16.1,
+  "rango": "Mediana (13–40 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Triangular / Telescópica / Regulable",
+  "estructuraDetalle": "Triangular",
+  "cliente": "Industrial",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 15,
+  "wp": 575,
+  "paneles": 28
+ },
+ {
+  "id": "ISCOT|2025",
+  "obra": "ISCOT",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-01",
+    "kwp": 15.2
+   }
+  ],
+  "kwp": 15.2,
+  "potObra": 15.2,
+  "rango": "Mediana (13–40 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Triangular / Telescópica / Regulable",
+  "estructuraDetalle": "Triangular",
+  "cliente": "Industrial",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 14,
+  "wp": 585,
+  "paneles": 26
+ },
+ {
+  "id": "MONTICH|2025",
+  "obra": "MONTICH",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-01",
+    "kwp": 1.0
+   }
+  ],
+  "kwp": 1.0,
+  "potObra": 10.4,
+  "rango": "Pequeña (5–12 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Triangular / Telescópica / Regulable",
+  "estructuraDetalle": "Triangular",
+  "cliente": "Industrial",
+  "sistema": "Híbrido",
+  "marca": "FRONIUS + VICTRON",
+  "acople": 10,
+  "wp": 580,
+  "paneles": 18
+ },
+ {
+  "id": "PURA QUIMICA|2025",
+  "obra": "PURA QUIMICA",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-01",
+    "kwp": 17.4
+   }
+  ],
+  "kwp": 17.4,
+  "potObra": 17.4,
+  "rango": "Mediana (13–40 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Coplanar",
+  "estructuraDetalle": "Coplanar",
+  "cliente": "Industrial",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 15,
+  "wp": 580,
+  "paneles": 30
+ },
+ {
+  "id": "SALOMON|2025",
+  "obra": "SALOMON",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-01",
+    "kwp": 16.2
+   }
+  ],
+  "kwp": 16.2,
+  "potObra": 16.2,
+  "rango": "Mediana (13–40 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Triangular / Telescópica / Regulable",
+  "estructuraDetalle": "Triangular",
+  "cliente": "Residencial",
+  "sistema": "Híbrido",
+  "marca": "FRONIUS + VICTRON",
+  "acople": 10,
+  "wp": 580,
+  "paneles": 28
+ },
+ {
+  "id": "MATIAS LOPEZ|2025",
+  "obra": "MATIAS LOPEZ",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-02",
+    "kwp": 3.9
+   }
+  ],
+  "kwp": 3.9,
+  "potObra": 3.9,
+  "rango": "Micro (1–4 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Triangular / Telescópica / Regulable",
+  "estructuraDetalle": "Triangular",
+  "cliente": "Residencial",
+  "sistema": "Híbrido",
+  "marca": "DEYE",
+  "acople": 12,
+  "wp": 550,
+  "paneles": 7
+ },
+ {
+  "id": "MERLINO|2025",
+  "obra": "MERLINO",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-02",
+    "kwp": 22.8
+   }
+  ],
+  "kwp": 22.8,
+  "potObra": 22.8,
+  "rango": "Mediana (13–40 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Coplanar",
+  "estructuraDetalle": "Coplanar",
+  "cliente": "Industrial",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 40,
+  "wp": 570,
+  "paneles": 40
+ },
+ {
+  "id": "METALURGICA GOBETTO|2025",
+  "obra": "METALURGICA GOBETTO",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-02",
+    "kwp": 44.2
+   },
+   {
+    "ym": "2025-03",
+    "kwp": 11.0
+   }
+  ],
+  "kwp": 55.2,
+  "potObra": 55.2,
+  "rango": "Grande (41–99 kWp)",
+  "implantacion": "Cochera solar",
+  "estructura": "Cochera solar",
+  "estructuraDetalle": "Perfil C",
+  "cliente": "Industrial",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 50,
+  "wp": 575,
+  "paneles": 96
+ },
+ {
+  "id": "BERTONE CASA CENTRAL|2025",
+  "obra": "BERTONE CASA CENTRAL",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-03",
+    "kwp": 34.5
+   }
+  ],
+  "kwp": 34.5,
+  "potObra": 34.5,
+  "rango": "Mediana (13–40 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Coplanar",
+  "estructuraDetalle": "Coplanar",
+  "cliente": "Industrial",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 30,
+  "wp": 575,
+  "paneles": 60
+ },
+ {
+  "id": "FERNIPLAST|2025",
+  "obra": "FERNIPLAST",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-03",
+    "kwp": 10.1
+   },
+   {
+    "ym": "2025-04",
+    "kwp": 49.5
+   }
+  ],
+  "kwp": 59.6,
+  "potObra": 59.7,
+  "rango": "Grande (41–99 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Coplanar",
+  "estructuraDetalle": "Coplanar",
+  "cliente": "Industrial",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 100,
+  "wp": 585,
+  "paneles": 102
+ },
+ {
+  "id": "SHONKO DEPOSITO|2025",
+  "obra": "SHONKO DEPOSITO",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-03",
+    "kwp": 59.8
+   }
+  ],
+  "kwp": 59.8,
+  "potObra": 59.8,
+  "rango": "Grande (41–99 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Coplanar",
+  "estructuraDetalle": "Coplanar",
+  "cliente": "Industrial",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 50,
+  "wp": 575,
+  "paneles": 104
+ },
+ {
+  "id": "SHONKO OFICINA|2025",
+  "obra": "SHONKO OFICINA",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-03",
+    "kwp": 23.7
+   },
+   {
+    "ym": "2025-04",
+    "kwp": 5.9
+   }
+  ],
+  "kwp": 29.6,
+  "potObra": 29.6,
+  "rango": "Mediana (13–40 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Coplanar",
+  "estructuraDetalle": "Coplanar",
+  "cliente": "Industrial",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 25,
+  "wp": 570,
+  "paneles": 52
+ },
+ {
+  "id": "AGEC|2025",
+  "obra": "AGEC",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-04",
+    "kwp": 170.0
+   },
+   {
+    "ym": "2025-05",
+    "kwp": 261.8
+   },
+   {
+    "ym": "2025-06",
+    "kwp": 27.6
+   }
+  ],
+  "kwp": 459.4,
+  "potObra": 413.4,
+  "rango": "Parque solar (>300 kWp)",
+  "implantacion": "En suelo",
+  "estructura": "Baratec (suelo)",
+  "estructuraDetalle": "Baratec",
+  "cliente": "Parque solar",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 400,
+  "wp": 580,
+  "paneles": 792
+ },
+ {
+  "id": "EMERCO|2025",
+  "obra": "EMERCO",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-04",
+    "kwp": 6.9
+   }
+  ],
+  "kwp": 6.9,
+  "potObra": 6.9,
+  "rango": "Pequeña (5–12 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Triangular / Telescópica / Regulable",
+  "estructuraDetalle": "Regulable",
+  "cliente": "Residencial",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 5,
+  "wp": 575,
+  "paneles": 12
+ },
+ {
+  "id": "FABIAN GASPANELLO|2025",
+  "obra": "FABIAN GASPANELLO",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-04",
+    "kwp": 5.6
+   }
+  ],
+  "kwp": 5.6,
+  "potObra": 5.6,
+  "rango": "Pequeña (5–12 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Triangular / Telescópica / Regulable",
+  "estructuraDetalle": "Triangular",
+  "cliente": "Residencial",
+  "sistema": "Híbrido",
+  "marca": "DEYE",
+  "acople": 6,
+  "wp": 555,
+  "paneles": 10
+ },
+ {
+  "id": "GOMERIA ALTAMIRANO|2025",
+  "obra": "GOMERIA ALTAMIRANO",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-04",
+    "kwp": 10.8
+   },
+   {
+    "ym": "2025-05",
+    "kwp": 24.0
+   }
+  ],
+  "kwp": 34.8,
+  "potObra": 34.8,
+  "rango": "Mediana (13–40 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Coplanar",
+  "estructuraDetalle": "Coplanar",
+  "cliente": "Industrial",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 30,
+  "wp": 580,
+  "paneles": 60
+ },
+ {
+  "id": "BIOFARMA|2025",
+  "obra": "BIOFARMA",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-05",
+    "kwp": 117.1
+   },
+   {
+    "ym": "2025-06",
+    "kwp": 39.0
+   }
+  ],
+  "kwp": 156.1,
+  "potObra": 156.2,
+  "rango": "Muy grande (100–300 kWp)",
+  "implantacion": "Cochera solar",
+  "estructura": "Cochera solar",
+  "estructuraDetalle": "Perfil P37 / P38",
+  "cliente": "Industrial",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 115,
+  "wp": 610,
+  "paneles": 256
+ },
+ {
+  "id": "IVAN KUSTICH|2025",
+  "obra": "IVAN KUSTICH",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-05",
+    "kwp": 3.3
+   },
+   {
+    "ym": "2025-06",
+    "kwp": 2.5
+   }
+  ],
+  "kwp": 5.8,
+  "potObra": 5.8,
+  "rango": "Pequeña (5–12 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Triangular / Telescópica / Regulable",
+  "estructuraDetalle": "Triangular c/ contrapesos",
+  "cliente": "Residencial",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 6,
+  "wp": 580,
+  "paneles": 10
+ },
+ {
+  "id": "FEDERICO CONSTRUCCIONES|2025",
+  "obra": "FEDERICO CONSTRUCCIONES",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-06",
+    "kwp": 30.0
+   },
+   {
+    "ym": "2025-07",
+    "kwp": 51.1
+   }
+  ],
+  "kwp": 81.1,
+  "potObra": 81.1,
+  "rango": "Grande (41–99 kWp)",
+  "implantacion": "Cochera solar",
+  "estructura": "Cochera solar",
+  "estructuraDetalle": "Perfil P37 / P38",
+  "cliente": "Industrial",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 100,
+  "wp": 575,
+  "paneles": 141
+ },
+ {
+  "id": "M METAL|2025",
+  "obra": "M METAL",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-06",
+    "kwp": 23.6
+   }
+  ],
+  "kwp": 23.6,
+  "potObra": 23.6,
+  "rango": "Mediana (13–40 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Coplanar",
+  "estructuraDetalle": "Coplanar",
+  "cliente": "Industrial",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 20,
+  "wp": 590,
+  "paneles": 40
+ },
+ {
+  "id": "AMPLIACIóN GLUPS|2025",
+  "obra": "AMPLIACIóN GLUPS",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-07",
+    "kwp": 21.1
+   }
+  ],
+  "kwp": 21.1,
+  "potObra": 20.9,
+  "rango": "Mediana (13–40 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Coplanar",
+  "estructuraDetalle": "Coplanar",
+  "cliente": "Industrial",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 200,
+  "wp": 585,
+  "paneles": 36
+ },
+ {
+  "id": "BECERRA RIO II (TECHO)|2025",
+  "obra": "BECERRA RIO II (TECHO)",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-07",
+    "kwp": 149.5
+   }
+  ],
+  "kwp": 149.5,
+  "potObra": 149.5,
+  "rango": "Muy grande (100–300 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Coplanar",
+  "estructuraDetalle": "Coplanar",
+  "cliente": "Comercio",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 200,
+  "wp": 575,
+  "paneles": 260
+ },
+ {
+  "id": "LEROMA (SUELO)|2025",
+  "obra": "LEROMA (SUELO)",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-08",
+    "kwp": 43.1
+   },
+   {
+    "ym": "2025-09",
+    "kwp": 31.7
+   },
+   {
+    "ym": "2025-10",
+    "kwp": 13.2
+   }
+  ],
+  "kwp": 88.0,
+  "potObra": 88.0,
+  "rango": "Grande (41–99 kWp)",
+  "implantacion": "En suelo",
+  "estructura": "Baratec (suelo)",
+  "estructuraDetalle": "BT roscada",
+  "cliente": "Industrial",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 150,
+  "wp": 710,
+  "paneles": 124
+ },
+ {
+  "id": "LEROMA (COCHERA SOLAR)|2025",
+  "obra": "LEROMA (COCHERA SOLAR)",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-09",
+    "kwp": 73.7
+   }
+  ],
+  "kwp": 73.7,
+  "potObra": 73.7,
+  "rango": "Grande (41–99 kWp)",
+  "implantacion": "Cochera solar",
+  "estructura": "Cochera solar",
+  "estructuraDetalle": "Perfil P37 / P38",
+  "cliente": "Industrial",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 150,
+  "wp": 585,
+  "paneles": 126
+ },
+ {
+  "id": "OSCAR BIDABEHERE|2025",
+  "obra": "OSCAR BIDABEHERE",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-09",
+    "kwp": 3.5
+   }
+  ],
+  "kwp": 3.5,
+  "potObra": 3.5,
+  "rango": "Micro (1–4 kWp)",
+  "implantacion": "En techo",
+  "estructura": "RS10",
+  "estructuraDetalle": "RS10",
+  "cliente": "Residencial",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 3,
+  "wp": 435,
+  "paneles": 8
+ },
+ {
+  "id": "ANDRES OBERTI|2025",
+  "obra": "ANDRES OBERTI",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-10",
+    "kwp": 5.7
+   }
+  ],
+  "kwp": 5.7,
+  "potObra": 5.7,
+  "rango": "Pequeña (5–12 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Coplanar",
+  "estructuraDetalle": "Coplanar",
+  "cliente": "Residencial",
+  "sistema": "Híbrido",
+  "marca": "VICTRON",
+  "acople": 5,
+  "wp": 710,
+  "paneles": 8
+ },
+ {
+  "id": "BRUNO FORTINI|2025",
+  "obra": "BRUNO FORTINI",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-10",
+    "kwp": 12.2
+   }
+  ],
+  "kwp": 12.2,
+  "potObra": 12.2,
+  "rango": "Mediana (13–40 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Coplanar",
+  "estructuraDetalle": "Coplanar",
+  "cliente": "Comercio",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 10,
+  "wp": 610,
+  "paneles": 20
+ },
+ {
+  "id": "COCHERA BECERRA RIO II|2025",
+  "obra": "COCHERA BECERRA RIO II",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-10",
+    "kwp": 69.0
+   }
+  ],
+  "kwp": 69.0,
+  "potObra": 69.0,
+  "rango": "Grande (41–99 kWp)",
+  "implantacion": "Cochera solar",
+  "estructura": "Cochera solar",
+  "estructuraDetalle": "Perfil C",
+  "cliente": "Comercio",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 200,
+  "wp": 575,
+  "paneles": 120
+ },
+ {
+  "id": "ECOVATIO|2025",
+  "obra": "ECOVATIO",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-10",
+    "kwp": 17.0
+   }
+  ],
+  "kwp": 17.0,
+  "potObra": 17.0,
+  "rango": "Mediana (13–40 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Coplanar",
+  "estructuraDetalle": "Coplanar",
+  "cliente": "Industrial",
+  "sistema": "On grid",
+  "marca": "FRONIUS",
+  "acople": 12,
+  "wp": 710,
+  "paneles": 24
+ },
+ {
+  "id": "WALTER ROCCO|2025",
+  "obra": "WALTER ROCCO",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-10",
+    "kwp": 12.2
+   }
+  ],
+  "kwp": 12.2,
+  "potObra": 12.2,
+  "rango": "Mediana (13–40 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Coplanar",
+  "estructuraDetalle": "Coplanar",
+  "cliente": "Industrial",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 10,
+  "wp": 610,
+  "paneles": 20
+ },
+ {
+  "id": "ALEJANDRO FERNANDEZ VALDES|2025",
+  "obra": "ALEJANDRO FERNANDEZ VALDES",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-11",
+    "kwp": 2.3
+   }
+  ],
+  "kwp": 2.3,
+  "potObra": 2.3,
+  "rango": "Micro (1–4 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Triangular / Telescópica / Regulable",
+  "estructuraDetalle": "Regulable",
+  "cliente": "Residencial",
+  "sistema": "Off grid",
+  "marca": "VICTRON",
+  "acople": 3,
+  "wp": 585,
+  "paneles": 4
+ },
+ {
+  "id": "JENARO VALINOTTO|2025",
+  "obra": "JENARO VALINOTTO",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-11",
+    "kwp": 129.1
+   },
+   {
+    "ym": "2025-12",
+    "kwp": 24.6
+   }
+  ],
+  "kwp": 153.7,
+  "potObra": 153.7,
+  "rango": "Muy grande (100–300 kWp)",
+  "implantacion": "En suelo",
+  "estructura": "Baratec (suelo)",
+  "estructuraDetalle": "BT roscada",
+  "cliente": "Parque solar",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 150,
+  "wp": 610,
+  "paneles": 252
+ },
+ {
+  "id": "SICILIANO|2025",
+  "obra": "SICILIANO",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-11",
+    "kwp": 6.1
+   }
+  ],
+  "kwp": 6.1,
+  "potObra": 9.8,
+  "rango": "Pequeña (5–12 kWp)",
+  "implantacion": "En suelo",
+  "estructura": "Baratec (suelo)",
+  "estructuraDetalle": "BT cementada",
+  "cliente": "Residencial",
+  "sistema": "Híbrido",
+  "marca": "VICTRON + HUAWEI",
+  "acople": 8,
+  "wp": 615,
+  "paneles": 16
+ },
+ {
+  "id": "MICHELIN BUENOS AIRES|2025",
+  "obra": "MICHELIN BUENOS AIRES",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-12",
+    "kwp": 23.4
+   }
+  ],
+  "kwp": 23.4,
+  "potObra": 23.4,
+  "rango": "Mediana (13–40 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Coplanar",
+  "estructuraDetalle": "Coplanar",
+  "cliente": "Comercio",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 20,
+  "wp": 710,
+  "paneles": 33
+ },
+ {
+  "id": "PSFV VILLA GENERAL BELGRANO ETAPA I|2025",
+  "obra": "PSFV VILLA GENERAL BELGRANO ETAPA I",
+  "anio": 2025,
+  "meses": [
+   {
+    "ym": "2025-12",
+    "kwp": 49.9
+   }
+  ],
+  "kwp": 49.9,
+  "potObra": 383.8,
+  "rango": "Parque solar (>300 kWp)",
+  "implantacion": "En suelo",
+  "estructura": "Baratec (suelo)",
+  "estructuraDetalle": "BT roscada",
+  "cliente": "Parque solar",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 330,
+  "wp": 615,
+  "paneles": 624
+ },
+ {
+  "id": "PSFV VILLA GENERAL BELGRANO ETAPA I|2026",
+  "obra": "PSFV VILLA GENERAL BELGRANO ETAPA I",
+  "anio": 2026,
+  "meses": [
+   {
+    "ym": "2026-01",
+    "kwp": 226.4
+   },
+   {
+    "ym": "2026-03",
+    "kwp": 95.9
+   },
+   {
+    "ym": "2026-04",
+    "kwp": 11.5
+   }
+  ],
+  "kwp": 333.8,
+  "potObra": 383.8,
+  "rango": "Parque solar (>300 kWp)",
+  "implantacion": "En suelo",
+  "estructura": "Baratec (suelo)",
+  "estructuraDetalle": "BT roscada",
+  "cliente": "Parque solar",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 330,
+  "wp": 615,
+  "paneles": 624
+ },
+ {
+  "id": "CAIMA SEGAL|2026",
+  "obra": "CAIMA SEGAL",
+  "anio": 2026,
+  "meses": [
+   {
+    "ym": "2026-02",
+    "kwp": 5.8
+   }
+  ],
+  "kwp": 5.8,
+  "potObra": 5.8,
+  "rango": "Pequeña (5–12 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Triangular / Telescópica / Regulable",
+  "estructuraDetalle": "Telescópica",
+  "cliente": "Industrial",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 5,
+  "wp": 575,
+  "paneles": 10
+ },
+ {
+  "id": "MARIA GRACIA BLASON|2026",
+  "obra": "MARIA GRACIA BLASON",
+  "anio": 2026,
+  "meses": [
+   {
+    "ym": "2026-02",
+    "kwp": 4.6
+   }
+  ],
+  "kwp": 4.6,
+  "potObra": 4.6,
+  "rango": "Pequeña (5–12 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Coplanar",
+  "estructuraDetalle": "Coplanar",
+  "cliente": "Residencial",
+  "sistema": "On grid",
+  "marca": "DEYE",
+  "acople": 6,
+  "wp": 575,
+  "paneles": 8
+ },
+ {
+  "id": "RUBEN PATRITTI|2026",
+  "obra": "RUBEN PATRITTI",
+  "anio": 2026,
+  "meses": [
+   {
+    "ym": "2026-02",
+    "kwp": 3.5
+   }
+  ],
+  "kwp": 3.5,
+  "potObra": 3.5,
+  "rango": "Micro (1–4 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Coplanar",
+  "estructuraDetalle": "Coplanar",
+  "cliente": "Residencial",
+  "sistema": "Off grid",
+  "marca": "VICTRON",
+  "acople": 3,
+  "wp": 575,
+  "paneles": 6
+ },
+ {
+  "id": "SICILIANO|2026",
+  "obra": "SICILIANO",
+  "anio": 2026,
+  "meses": [
+   {
+    "ym": "2026-02",
+    "kwp": 3.7
+   }
+  ],
+  "kwp": 3.7,
+  "potObra": 9.8,
+  "rango": "Pequeña (5–12 kWp)",
+  "implantacion": "En suelo",
+  "estructura": "Baratec (suelo)",
+  "estructuraDetalle": "BT cementada",
+  "cliente": "Residencial",
+  "sistema": "Híbrido",
+  "marca": "VICTRON + HUAWEI",
+  "acople": 8,
+  "wp": 615,
+  "paneles": 16
+ },
+ {
+  "id": "UTN VILLA MARIA|2026",
+  "obra": "UTN VILLA MARIA",
+  "anio": 2026,
+  "meses": [
+   {
+    "ym": "2026-02",
+    "kwp": 39.5
+   },
+   {
+    "ym": "2026-04",
+    "kwp": 16.7
+   },
+   {
+    "ym": "2026-05",
+    "kwp": 3.6
+   }
+  ],
+  "kwp": 59.8,
+  "potObra": 59.8,
+  "rango": "Grande (41–99 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Triangular / Telescópica / Regulable",
+  "estructuraDetalle": "Telescópica",
+  "cliente": "Sector público",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 50,
+  "wp": 575,
+  "paneles": 104
+ },
+ {
+  "id": "HOTEL AZUR|2026",
+  "obra": "HOTEL AZUR",
+  "anio": 2026,
+  "meses": [
+   {
+    "ym": "2026-03",
+    "kwp": 83.3
+   },
+   {
+    "ym": "2026-04",
+    "kwp": 116.6
+   },
+   {
+    "ym": "2026-05",
+    "kwp": 133.2
+   }
+  ],
+  "kwp": 333.1,
+  "potObra": 333.1,
+  "rango": "Parque solar (>300 kWp)",
+  "implantacion": "En suelo",
+  "estructura": "Baratec (suelo)",
+  "estructuraDetalle": "BT Hincada",
+  "cliente": "Parque solar",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 330,
+  "wp": 610,
+  "paneles": 546
+ },
+ {
+  "id": "PSFV VILLA GENERAL BELGRANO ETAPA II|2026",
+  "obra": "PSFV VILLA GENERAL BELGRANO ETAPA II",
+  "anio": 2026,
+  "meses": [
+   {
+    "ym": "2026-06",
+    "kwp": 268.6
+   },
+   {
+    "ym": "2026-07",
+    "kwp": 115.1
+   }
+  ],
+  "kwp": 383.7,
+  "potObra": 383.8,
+  "rango": "Parque solar (>300 kWp)",
+  "implantacion": "En suelo",
+  "estructura": "Baratec (suelo)",
+  "estructuraDetalle": "BT roscada",
+  "cliente": "Parque solar",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 330,
+  "wp": 615,
+  "paneles": 624
+ },
+ {
+  "id": "EMERCO (OPTICA)|2026",
+  "obra": "EMERCO (OPTICA)",
+  "anio": 2026,
+  "meses": [
+   {
+    "ym": "2026-08",
+    "kwp": 7.1
+   }
+  ],
+  "kwp": 7.1,
+  "potObra": 7.1,
+  "rango": "Pequeña (5–12 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Coplanar",
+  "estructuraDetalle": "Coplanar",
+  "cliente": "Comercio",
+  "sistema": "Híbrido",
+  "marca": "DEYE",
+  "acople": 6,
+  "wp": 710,
+  "paneles": 10
+ },
+ {
+  "id": "LAGUINGUE|2026",
+  "obra": "LAGUINGUE",
+  "anio": 2026,
+  "meses": [
+   {
+    "ym": "2026-08",
+    "kwp": 24.4
+   }
+  ],
+  "kwp": 24.4,
+  "potObra": 24.4,
+  "rango": "Mediana (13–40 kWp)",
+  "implantacion": "En suelo",
+  "estructura": "Baratec (suelo)",
+  "estructuraDetalle": "BT cementada",
+  "cliente": "Residencial",
+  "sistema": "Híbrido",
+  "marca": "DEYE",
+  "acople": 20,
+  "wp": 580,
+  "paneles": 42
+ },
+ {
+  "id": "PANADERÍA LA ARGENTINA|2026",
+  "obra": "PANADERÍA LA ARGENTINA",
+  "anio": 2026,
+  "meses": [
+   {
+    "ym": "2026-08",
+    "kwp": 17.4
+   }
+  ],
+  "kwp": 17.4,
+  "potObra": 17.4,
+  "rango": "Mediana (13–40 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Triangular / Telescópica / Regulable",
+  "estructuraDetalle": "Triangular",
+  "cliente": "Comercio",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 15,
+  "wp": 620,
+  "paneles": 28
+ },
+ {
+  "id": "TEKNAL (Pergamino)|2026",
+  "obra": "TEKNAL (Pergamino)",
+  "anio": 2026,
+  "meses": [
+   {
+    "ym": "2026-08",
+    "kwp": 223.2
+   }
+  ],
+  "kwp": 223.2,
+  "potObra": 223.2,
+  "rango": "Muy grande (100–300 kWp)",
+  "implantacion": "En techo",
+  "estructura": "Coplanar",
+  "estructuraDetalle": "Coplanar",
+  "cliente": "Industrial",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 200,
+  "wp": 620,
+  "paneles": 360
+ },
+ {
+  "id": "PSFV VILLA GENERAL BELGRANO ETAPA III|2026",
+  "obra": "PSFV VILLA GENERAL BELGRANO ETAPA III",
+  "anio": 2026,
+  "meses": [
+   {
+    "ym": "2026-09",
+    "kwp": 232.1
+   }
+  ],
+  "kwp": 232.1,
+  "potObra": 386.9,
+  "rango": "Parque solar (>300 kWp)",
+  "implantacion": "En suelo",
+  "estructura": "Baratec (suelo)",
+  "estructuraDetalle": "BT cementada",
+  "cliente": "Parque solar",
+  "sistema": "On grid",
+  "marca": "HUAWEI",
+  "acople": 330,
+  "wp": 620,
+  "paneles": 624
+ }
+]
