@@ -93,3 +93,29 @@ export function toCsv(list) {
   const esc = (v) => `"${String(v).replace(/"/g, '""')}"`;
   return "﻿" + [cols.map((c) => esc(c[0])).join(";"), ...list.map((o) => cols.map((c) => esc(c[1](o))).join(";"))].join("\n");
 }
+
+// ---- Colores fijos por categoría (mismos colores en todas las solapas)
+export const C = { verde: "#95de1d", turq: "#22d3c5", amarillo: "#ffc933", coral: "#ff6b6b", violeta: "#9b7bff", celeste: "#4fc3f7", naranja: "#ff9f4a", lima: "#c7ee8a" };
+const CICLO = [C.verde, C.turq, C.amarillo, C.coral, C.violeta, C.celeste, C.naranja, C.lima];
+const MAPA = {
+  anio: { 2025: C.turq, 2026: C.verde },
+  rango: { "Micro (1–4 kWp)": C.celeste, "Pequeña (5–12 kWp)": C.turq, "Mediana (13–40 kWp)": C.verde, "Grande (41–99 kWp)": C.amarillo, "Muy grande (100–300 kWp)": C.naranja, "Parque solar (>300 kWp)": C.coral },
+  implantacion: { "En techo": C.amarillo, "En suelo": C.verde, "Cochera solar": C.violeta },
+  estructura: { "Baratec (suelo)": C.verde, Coplanar: C.amarillo, "Cochera solar": C.violeta, "Triangular / Telescópica / Regulable": C.turq, RS10: C.coral },
+  sistema: { "On grid": C.verde, "Híbrido": C.amarillo, "Off grid": C.coral },
+  marca: { Huawei: C.coral, Deye: C.celeste, Fronius: C.amarillo, Victron: C.violeta, "Fronius + Victron": C.naranja, "Victron + Huawei": C.turq },
+  cliente: { Industrial: C.amarillo, Residencial: C.celeste, Comercio: C.naranja, "Parque solar": C.verde, "Sector público": C.violeta },
+};
+const CICLO_WP = ["#4fc3f7", "#22d3c5", "#3fb8a0", "#95de1d", "#c7ee8a", "#e3e86a", "#ffc933", "#ff9f4a", "#ff8a5c", "#ff6b6b", "#d66bd6", "#9b7bff"];
+export function colorDe(dim, nombre) {
+  if (dim === "wp") {
+    const w = Number(String(nombre).replace(/\D/g, ""));
+    const i = WP_LIST.indexOf(w);
+    return i >= 0 ? CICLO_WP[i % CICLO_WP.length] : "#7a9aa1";
+  }
+  const c = (MAPA[dim] || {})[nombre];
+  if (c) return c;
+  let h = 0;
+  for (const ch of String(nombre)) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
+  return CICLO[h % CICLO.length];
+}

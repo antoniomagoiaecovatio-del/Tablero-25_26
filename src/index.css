@@ -2,12 +2,18 @@
 
 @theme {
   --color-bg: #1d3c44;
+  --color-bg2: #16323a;
   --color-card: #26474f;
   --color-card2: #2c5059;
   --color-line: #3b5d65;
   --color-green: #95de1d;
   --color-lgreen: #c7ee8a;
   --color-muted: #b9c7c9;
+  --color-turq: #22d3c5;
+  --color-sun: #ffc933;
+  --color-coral: #ff6b6b;
+  --color-violet: #9b7bff;
+  --color-sky: #4fc3f7;
   --font-sans: Calibri, "Segoe UI", system-ui, sans-serif;
 }
 
@@ -19,9 +25,19 @@ body,
 
 body {
   margin: 0;
-  background: var(--color-bg);
   color: #fff;
   font-family: var(--font-sans);
+  background-color: #16323a;
+  background-image:
+    radial-gradient(900px 500px at 8% -5%, rgba(149, 222, 29, 0.14), transparent 60%),
+    radial-gradient(800px 500px at 100% 0%, rgba(34, 211, 197, 0.14), transparent 60%),
+    radial-gradient(900px 600px at 50% 110%, rgba(155, 123, 255, 0.1), transparent 60%);
+}
+
+.panel {
+  background: linear-gradient(160deg, rgba(44, 80, 89, 0.92), rgba(38, 71, 79, 0.92));
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
 }
 
 ::-webkit-scrollbar {

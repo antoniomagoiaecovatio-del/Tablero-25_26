@@ -1,33 +1,36 @@
 import React, { useMemo, useState } from "react";
 import { Bar, BarChart, Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis, LabelList } from "recharts";
 import {
-  FILTROS_VACIOS, ORDEN, WP_LIST, YM_LIST, capw, filtrar, marcasDe, mensual, nf, participacion, pct, toCsv, ymLabel,
+  C, FILTROS_VACIOS, ORDEN, WP_LIST, YM_LIST, capw, colorDe, filtrar, mensual, nf, participacion, pct, toCsv, ymLabel,
 } from "./lib.js";
 
-const PALETA = ["#95de1d", "#c7ee8a", "#b9c7c9", "#5f8f97", "#e4f5c4", "#7a9aa1", "#3f7a52", "#d9e36a"];
+const TIP = { background: "#16323a", border: "1px solid #3b5d65", color: "#fff", borderRadius: 8 };
 
-function Chip({ active, onClick, children }) {
+function Chip({ active, onClick, children, color }) {
+  const c = color || C.verde;
   return (
     <button
       onClick={onClick}
+      style={active ? { background: c, borderColor: c, color: "#16323a" } : undefined}
       className={
-        "rounded-full border px-3 py-1 text-sm transition-colors " +
-        (active ? "border-green bg-green text-bg font-semibold" : "border-line bg-card2 text-white hover:border-green")
+        "inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-sm transition-all " +
+        (active ? "font-semibold shadow-md" : "border-line bg-card2/70 text-white hover:-translate-y-px hover:border-white/40")
       }
     >
+      {color && !active && <span className="inline-block h-2 w-2 rounded-full" style={{ background: c }} />}
       {children}
     </button>
   );
 }
 
-function Grupo({ titulo, opciones, valor, onChange, fmt = (x) => x }) {
+function Grupo({ titulo, dim, opciones, valor, onChange, fmt = (x) => x }) {
   const toggle = (v) => onChange(valor.includes(v) ? valor.filter((x) => x !== v) : [...valor, v]);
   return (
     <div>
-      <div className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-muted">{titulo}</div>
+      <div className="mb-1.5 text-xs font-bold uppercase tracking-wider text-lgreen">{titulo}</div>
       <div className="flex flex-wrap gap-1.5">
         {opciones.map((o) => (
-          <Chip key={String(o)} active={valor.includes(o)} onClick={() => toggle(o)}>
+          <Chip key={String(o)} color={colorDe(dim, o)} active={valor.includes(o)} onClick={() => toggle(o)}>
             {fmt(o)}
           </Chip>
         ))}
@@ -36,12 +39,13 @@ function Grupo({ titulo, opciones, valor, onChange, fmt = (x) => x }) {
   );
 }
 
-function Kpi({ etiqueta, valor, nota }) {
+function Kpi({ etiqueta, valor, nota, color = C.verde }) {
   return (
-    <div className="rounded-xl bg-card p-4">
-      <div className="text-xs font-semibold uppercase tracking-wide text-muted">{etiqueta}</div>
-      <div className="mt-1 text-3xl font-bold text-green">{valor}</div>
-      {nota && <div className="mt-0.5 text-sm text-muted">{nota}</div>}
+    <div className="panel relative overflow-hidden rounded-2xl p-4">
+      <div className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full opacity-25 blur-2xl" style={{ background: color }} />
+      <div className="relative text-xs font-bold uppercase tracking-wider text-muted">{etiqueta}</div>
+      <div className="relative mt-1 text-3xl font-extrabold" style={{ color }}>{valor}</div>
+      {nota && <div className="relative mt-0.5 text-sm text-muted">{nota}</div>}
     </div>
   );
 }
@@ -50,7 +54,7 @@ function Filtros({ f, setF, total }) {
   const set = (k) => (v) => setF({ ...f, [k]: v });
   const hayFiltros = JSON.stringify({ ...f, q: "" }) !== JSON.stringify({ ...FILTROS_VACIOS, q: "" }) || f.q;
   return (
-    <section className="space-y-4 rounded-xl bg-card p-4">
+    <section className="panel space-y-4 rounded-2xl p-4">
       <div className="flex flex-wrap items-end gap-4">
         <label className="text-sm">
           <span className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-muted">Desde</span>
@@ -93,12 +97,12 @@ function Filtros({ f, setF, total }) {
         )}
       </div>
       <div className="grid gap-4 md:grid-cols-2">
-        <Grupo titulo="Clasificación de potencia (de la obra)" opciones={ORDEN.rango} valor={f.rango} onChange={set("rango")} fmt={(x) => x.replace(" kWp)", ")").replace("Parque solar", "Parque")} />
-        <Grupo titulo="Implantación" opciones={ORDEN.implantacion} valor={f.implantacion} onChange={set("implantacion")} />
-        <Grupo titulo="Tipo de estructura (agrupada)" opciones={ORDEN.estructura} valor={f.estructura} onChange={set("estructura")} />
-        <Grupo titulo="Tipo de instalación" opciones={ORDEN.sistema} valor={f.sistema} onChange={set("sistema")} />
-        <Grupo titulo="Marca de inversor" opciones={ORDEN.marca} valor={f.marca} onChange={set("marca")} />
-        <Grupo titulo="Potencia del panel (Wp)" opciones={WP_LIST} valor={f.wp} onChange={set("wp")} fmt={(x) => x + " Wp"} />
+        <Grupo dim="rango" titulo="Clasificación de potencia (de la obra)" opciones={ORDEN.rango} valor={f.rango} onChange={set("rango")} fmt={(x) => x.replace(" kWp)", ")").replace("Parque solar", "Parque")} />
+        <Grupo dim="implantacion" titulo="Implantación" opciones={ORDEN.implantacion} valor={f.implantacion} onChange={set("implantacion")} />
+        <Grupo dim="estructura" titulo="Tipo de estructura (agrupada)" opciones={ORDEN.estructura} valor={f.estructura} onChange={set("estructura")} />
+        <Grupo dim="sistema" titulo="Tipo de instalación" opciones={ORDEN.sistema} valor={f.sistema} onChange={set("sistema")} />
+        <Grupo dim="marca" titulo="Marca de inversor" opciones={ORDEN.marca} valor={f.marca} onChange={set("marca")} />
+        <Grupo dim="wp" titulo="Potencia del panel (Wp)" opciones={WP_LIST} valor={f.wp} onChange={set("wp")} fmt={(x) => x + " Wp"} />
       </div>
       <div className="text-xs text-muted">
         Sin selección = todos. Dentro de cada grupo se pueden elegir varias opciones; entre grupos los filtros se combinan (y). Con un rango de fechas, cada obra suma solo lo instalado en esos meses.
@@ -110,30 +114,40 @@ function Filtros({ f, setF, total }) {
 function GraficoMensual({ list }) {
   const data = useMemo(() => mensual(list).filter((d) => d.kwp > 0 || true), [list]);
   return (
-    <div className="rounded-xl bg-card p-4">
-      <div className="mb-2 text-sm font-semibold">Potencia instalada por mes (kWp)</div>
+    <div className="panel rounded-2xl p-4">
+      <div className="mb-2 text-base font-bold">Potencia instalada por mes (kWp)</div>
       <div className="h-56">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={data} margin={{ top: 18, right: 8, left: 0, bottom: 0 }}>
             <XAxis dataKey="mes" tick={{ fill: "#b9c7c9", fontSize: 11 }} interval={0} angle={-45} textAnchor="end" height={45} />
             <YAxis hide />
-            <Tooltip formatter={(v) => [nf(v) + " kWp", "Instalado"]} contentStyle={{ background: "#1d3c44", border: "1px solid #3b5d65", color: "#fff" }} cursor={{ fill: "rgba(255,255,255,0.05)" }} />
+            <Tooltip formatter={(v) => [nf(v) + " kWp", "Instalado"]} contentStyle={TIP} cursor={{ fill: "rgba(255,255,255,0.05)" }} />
             <Bar isAnimationActive={false} dataKey="kwp" radius={[3, 3, 0, 0]}>
-              {data.map((d) => <Cell key={d.ym} fill={d.anio === "2025" ? "#b9c7c9" : "#95de1d"} />)}
+              {data.map((d) => <Cell key={d.ym} fill={colorDe("anio", d.anio)} />)}
               <LabelList dataKey="kwp" position="top" fill="#fff" fontSize={10} formatter={(v) => (v > 0 ? Math.round(v) : "")} />
             </Bar>
           </BarChart>
         </ResponsiveContainer>
       </div>
       <div className="mt-1 flex gap-4 text-xs text-muted">
-        <span><span className="mr-1 inline-block h-2.5 w-2.5 rounded-sm bg-muted" />2025</span>
-        <span><span className="mr-1 inline-block h-2.5 w-2.5 rounded-sm bg-green" />2026</span>
+        <span><span className="mr-1 inline-block h-2.5 w-2.5 rounded-sm" style={{ background: colorDe("anio", "2025") }} />2025</span>
+        <span><span className="mr-1 inline-block h-2.5 w-2.5 rounded-sm" style={{ background: colorDe("anio", "2026") }} />2026</span>
       </div>
     </div>
   );
 }
 
 const AL = { left: "text-left", right: "text-right", center: "text-center" };
+const Pill = ({ dim, texto, valor }) => {
+  const c = colorDe(dim, valor);
+  return (
+    <span className="inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 text-xs font-semibold" style={{ background: c + "26", color: c }}>
+      <span className="h-1.5 w-1.5 rounded-full" style={{ background: c }} />{texto}
+    </span>
+  );
+};
+const PILL = { anio: "anio", rango: "rango", implantacion: "implantacion", estructura: "estructura", sistema: "sistema", marca: "marca", wp: "wp", cliente: "cliente" };
+const valorPill = (k, o) => (k === "marca" ? capw(o.marca) : k === "wp" ? (o.wp ? o.wp + " Wp" : null) : o[k]);
 const COLS = [
   ["anio", "Año", (o) => o.anio, "center"],
   ["obra", "Obra", (o) => o.obra, "left"],
@@ -171,14 +185,14 @@ function Tabla({ list }) {
     URL.revokeObjectURL(a.href);
   };
   return (
-    <div className="rounded-xl bg-card p-4">
+    <div className="panel rounded-2xl p-4">
       <div className="mb-2 flex items-center justify-between">
-        <div className="text-sm font-semibold">Detalle de obras ({list.length})</div>
-        <button onClick={descargar} className="rounded-md border border-line px-3 py-1 text-sm hover:border-green">Descargar CSV</button>
+        <div className="text-base font-bold">Detalle de obras ({list.length})</div>
+        <button onClick={descargar} className="rounded-full border border-green px-4 py-1 text-sm font-semibold text-green transition-colors hover:bg-green hover:text-bg2">Descargar CSV</button>
       </div>
       <div className="max-h-[560px] overflow-auto rounded-lg border border-line">
         <table className="w-full border-collapse text-sm">
-          <thead className="sticky top-0 z-10 bg-green text-bg">
+          <thead className="sticky top-0 z-10 bg-bg2 text-lgreen">
             <tr>
               {COLS.map(([k, t, , al]) => (
                 <th key={k} onClick={() => setOrden(orden.k === k ? { k, d: -orden.d } : { k, d: k === "obra" ? 1 : -1 })}
@@ -191,9 +205,11 @@ function Tabla({ list }) {
           <tbody>
             {sorted.map((o, i) => (
               <React.Fragment key={o.id}>
-                <tr onClick={() => setAbierta(abierta === o.id ? null : o.id)} className={"cursor-pointer hover:bg-line " + (i % 2 ? "bg-card2" : "bg-card")}>
+                <tr onClick={() => setAbierta(abierta === o.id ? null : o.id)} className={"cursor-pointer transition-colors hover:bg-line " + (i % 2 ? "bg-card2/80" : "bg-card/80")}>
                   {COLS.map(([k, , fn, al]) => (
-                    <td key={k} className={"whitespace-nowrap px-2.5 py-1.5 " + AL[al] + (k === "obra" ? " font-semibold" : "") + (k === "kwpSel" ? " font-bold text-green" : "")}>{fn(o)}</td>
+                    <td key={k} className={"whitespace-nowrap px-2.5 py-1.5 " + AL[al] + (k === "obra" ? " font-semibold" : "") + (k === "kwpSel" ? " font-bold text-green" : "")}>
+                      {PILL[k] && valorPill(k, o) ? <Pill dim={PILL[k]} valor={valorPill(k, o)} texto={k === "rango" ? fn(o) : String(valorPill(k, o)).replace(/ Wp$/, "")} /> : fn(o)}
+                    </td>
                   ))}
                 </tr>
                 {abierta === o.id && (
@@ -223,10 +239,10 @@ function Detalle({ list }) {
   return (
     <div className="space-y-4">
       <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
-        <Kpi etiqueta="Potencia instalada" valor={nf(kwp) + " kWp"} />
-        <Kpi etiqueta="Obras" valor={nf(list.length, 0)} nota={"Promedio " + nf(list.length ? kwp / list.length : 0) + " kWp por obra"} />
-        <Kpi etiqueta="On grid" valor={pct(onGrid, kwp)} nota={nf(onGrid) + " kWp"} />
-        <Kpi etiqueta="Panel promedio" valor={wps.length ? nf(wpProm, 0) + " Wp" : "–"} nota="Ponderado por kWp" />
+        <Kpi color={C.verde} etiqueta="Potencia instalada" valor={nf(kwp) + " kWp"} />
+        <Kpi color={C.turq} etiqueta="Obras" valor={nf(list.length, 0)} nota={"Promedio " + nf(list.length ? kwp / list.length : 0) + " kWp por obra"} />
+        <Kpi color={C.amarillo} etiqueta="On grid" valor={pct(onGrid, kwp)} nota={nf(onGrid) + " kWp"} />
+        <Kpi color={C.violeta} etiqueta="Panel promedio" valor={wps.length ? nf(wpProm, 0) + " Wp" : "–"} nota="Ponderado por kWp" />
       </div>
       <GraficoMensual list={list} />
       <Tabla list={list} />
@@ -238,48 +254,48 @@ function Participacion({ list }) {
   const [metrica, setMetrica] = useState("kwp");
   const total = list.reduce((t, o) => t + (metrica === "kwp" ? o.kwpSel : 1), 0);
   const dims = [
-    ["Año", participacion(list, (o) => o.anio)],
-    ["Clasificación de potencia", participacion(list, (o) => o.rango, ORDEN.rango)],
-    ["Implantación", participacion(list, (o) => o.implantacion, ORDEN.implantacion)],
-    ["Tipo de estructura", participacion(list, (o) => o.estructura, ORDEN.estructura)],
-    ["Marca de inversor", participacion(list, (o) => capw(o.marca))],
-    ["Tipo de instalación", participacion(list, (o) => o.sistema, ORDEN.sistema)],
-    ["Potencia del panel", participacion(list, (o) => (o.wp ? o.wp + " Wp" : "Sin dato"), WP_LIST.map((w) => w + " Wp"))],
-    ["Tipo de cliente", participacion(list, (o) => o.cliente)],
+    ["Año", "anio", participacion(list, (o) => o.anio)],
+    ["Clasificación de potencia", "rango", participacion(list, (o) => o.rango, ORDEN.rango)],
+    ["Implantación", "implantacion", participacion(list, (o) => o.implantacion, ORDEN.implantacion)],
+    ["Tipo de estructura", "estructura", participacion(list, (o) => o.estructura, ORDEN.estructura)],
+    ["Marca de inversor", "marca", participacion(list, (o) => capw(o.marca))],
+    ["Tipo de instalación", "sistema", participacion(list, (o) => o.sistema, ORDEN.sistema)],
+    ["Potencia del panel", "wp", participacion(list, (o) => (o.wp ? o.wp + " Wp" : "Sin dato"), WP_LIST.map((w) => w + " Wp"))],
+    ["Tipo de cliente", "cliente", participacion(list, (o) => o.cliente)],
   ];
   const val = (d) => (metrica === "kwp" ? d.kwp : d.obras);
   return (
     <div className="space-y-4">
       <div className="flex flex-wrap items-center gap-3">
         <div className="text-sm text-muted">Participación sobre:</div>
-        <Chip active={metrica === "kwp"} onClick={() => setMetrica("kwp")}>Potencia (kWp)</Chip>
-        <Chip active={metrica === "obras"} onClick={() => setMetrica("obras")}>Cantidad de obras</Chip>
+        <Chip color={C.verde} active={metrica === "kwp"} onClick={() => setMetrica("kwp")}>Potencia (kWp)</Chip>
+        <Chip color={C.turq} active={metrica === "obras"} onClick={() => setMetrica("obras")}>Cantidad de obras</Chip>
         <div className="text-sm text-muted">Total filtrado: <b className="text-white">{metrica === "kwp" ? nf(total) + " kWp" : nf(total, 0) + " obras"}</b></div>
       </div>
       <div className="grid gap-4 lg:grid-cols-2">
-        {dims.map(([titulo, data]) => (
-          <div key={titulo} className="rounded-xl bg-card p-4">
-            <div className="mb-2 text-sm font-semibold">{titulo}</div>
+        {dims.map(([titulo, dim, data]) => (
+          <div key={titulo} className="panel rounded-2xl p-4">
+            <div className="mb-2 text-base font-bold">{titulo}</div>
             {!data.length ? <div className="p-6 text-center text-muted">Sin datos</div> : (
               <div className="flex flex-col items-center gap-3 sm:flex-row">
                 <div className="h-44 w-44 shrink-0">
                   <ResponsiveContainer width="100%" height="100%">
                     <PieChart>
                       <Pie isAnimationActive={false} data={data.map((d) => ({ ...d, v: val(d) }))} dataKey="v" nameKey="nombre" innerRadius={42} outerRadius={80} stroke="#26474f" strokeWidth={2}>
-                        {data.map((d, i) => <Cell key={d.nombre} fill={PALETA[i % PALETA.length]} />)}
+                        {data.map((d) => <Cell key={d.nombre} fill={colorDe(dim, d.nombre)} />)}
                       </Pie>
-                      <Tooltip formatter={(v, n) => [metrica === "kwp" ? nf(v) + " kWp (" + pct(v, total) + ")" : v + " obras (" + pct(v, total) + ")", n]} contentStyle={{ background: "#1d3c44", border: "1px solid #3b5d65", color: "#fff" }} />
+                      <Tooltip formatter={(v, n) => [metrica === "kwp" ? nf(v) + " kWp (" + pct(v, total) + ")" : v + " obras (" + pct(v, total) + ")", n]} contentStyle={TIP} />
                     </PieChart>
                   </ResponsiveContainer>
                 </div>
                 <div className="w-full flex-1 space-y-1.5">
-                  {data.map((d, i) => (
+                  {data.map((d) => (
                     <div key={d.nombre} className="text-sm">
                       <div className="flex items-center justify-between gap-2">
-                        <span className="flex items-center gap-1.5"><span className="inline-block h-2.5 w-2.5 rounded-sm" style={{ background: PALETA[i % PALETA.length] }} />{d.nombre}</span>
-                        <span className="whitespace-nowrap"><b className="text-green">{pct(val(d), total)}</b> <span className="text-muted">· {metrica === "kwp" ? nf(d.kwp) + " kWp" : d.obras + (d.obras === 1 ? " obra" : " obras")}</span></span>
+                        <span className="flex items-center gap-1.5"><span className="inline-block h-2.5 w-2.5 rounded-sm" style={{ background: colorDe(dim, d.nombre) }} />{d.nombre}</span>
+                        <span className="whitespace-nowrap"><b style={{ color: colorDe(dim, d.nombre) }}>{pct(val(d), total)}</b> <span className="text-muted">· {metrica === "kwp" ? nf(d.kwp) + " kWp" : d.obras + (d.obras === 1 ? " obra" : " obras")}</span></span>
                       </div>
-                      <div className="h-1.5 rounded bg-bg"><div className="h-1.5 rounded" style={{ width: (total ? (val(d) / total) * 100 : 0) + "%", background: PALETA[i % PALETA.length] }} /></div>
+                      <div className="h-2 rounded-full bg-bg2"><div className="h-2 rounded-full" style={{ width: (total ? (val(d) / total) * 100 : 0) + "%", background: colorDe(dim, d.nombre) }} /></div>
                     </div>
                   ))}
                 </div>
@@ -293,23 +309,48 @@ function Participacion({ list }) {
   );
 }
 
+function Encabezado({ list, f }) {
+  const kwp = list.reduce((t, o) => t + o.kwpSel, 0);
+  const stats = [
+    ["Potencia filtrada", nf(kwp) + " kWp", C.verde],
+    ["Obras", nf(list.length, 0), C.turq],
+    ["Promedio por obra", nf(list.length ? kwp / list.length : 0) + " kWp", C.amarillo],
+    ["Período", ymLabel(f.desde) + " → " + ymLabel(f.hasta), C.violeta],
+  ];
+  return (
+    <header className="relative overflow-hidden rounded-3xl border border-white/10 p-5 shadow-xl md:p-6" style={{ background: "linear-gradient(120deg, #123138 0%, #1d4a50 55%, #24604f 100%)" }}>
+      <div className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full opacity-30 blur-3xl" style={{ background: C.verde }} />
+      <div className="pointer-events-none absolute -bottom-24 left-1/3 h-56 w-56 rounded-full opacity-20 blur-3xl" style={{ background: C.turq }} />
+      <div className="relative flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <h1 className="text-2xl font-extrabold md:text-3xl">Obras instaladas 2025–2026</h1>
+          <p className="text-sm text-muted">Potencia, implantación, estructura, paneles e inversores · insumo para evaluar compras</p>
+        </div>
+        <img src="/logo-ecovatio.png" alt="Ecovatio" className="h-8" />
+      </div>
+      <div className="relative mt-4 grid grid-cols-2 gap-3 md:grid-cols-4">
+        {stats.map(([t, v, c]) => (
+          <div key={t} className="rounded-2xl border border-white/10 bg-black/20 px-4 py-2.5 backdrop-blur">
+            <div className="text-[11px] font-bold uppercase tracking-wider text-muted">{t}</div>
+            <div className="text-xl font-extrabold md:text-2xl" style={{ color: c }}>{v}</div>
+          </div>
+        ))}
+      </div>
+    </header>
+  );
+}
+
 export default function App() {
   const [f, setF] = useState(FILTROS_VACIOS);
   const [tab, setTab] = useState("detalle");
   const list = useMemo(() => filtrar(f), [f]);
   return (
     <div className="mx-auto max-w-[1400px] space-y-4 p-4 md:p-6">
-      <header className="flex flex-wrap items-center justify-between gap-3">
-        <div>
-          <h1 className="text-2xl font-bold">Obras instaladas 2025–2026</h1>
-          <p className="text-sm text-muted">Potencia, implantación, estructura, paneles e inversores · insumo para evaluar compras</p>
-        </div>
-        <img src="/logo-ecovatio.png" alt="Ecovatio" className="h-8" />
-      </header>
+      <Encabezado list={list} f={f} />
       <Filtros f={f} setF={setF} />
-      <nav className="flex gap-2">
-        <Chip active={tab === "detalle"} onClick={() => setTab("detalle")}>Detalle de obras</Chip>
-        <Chip active={tab === "part"} onClick={() => setTab("part")}>% de participación</Chip>
+      <nav className="flex gap-2 border-b border-line pb-2">
+        <button onClick={() => setTab("detalle")} className={"rounded-lg px-5 py-2 text-base font-bold transition-all " + (tab === "detalle" ? "bg-green text-bg2 shadow-lg" : "bg-card2/60 text-white hover:bg-card2")}>Detalle de obras</button>
+        <button onClick={() => setTab("part")} className={"rounded-lg px-5 py-2 text-base font-bold transition-all " + (tab === "part" ? "bg-turq text-bg2 shadow-lg" : "bg-card2/60 text-white hover:bg-card2")}>% de participación</button>
       </nav>
       {tab === "detalle" ? <Detalle list={list} /> : <Participacion list={list} />}
       <footer className="pb-4 text-xs text-muted">
